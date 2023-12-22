@@ -1,37 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
-// import Swal from "sweetalert2";
-// import useIsUser from "../../hooks/useIsUser";
-
-// import { useAuth } from "../contexts/authContext";
-// import { useTheme } from "../contexts/themeContext";
 import Headroom from "react-headroom";
+import { Link, useLocation } from "react-router-dom";
 import NavItem from "../Shared/NavItem";
+import NavbarEnd from "../Shared/NavbarEnd";
 import SectionWrapper from "../Shared/SectionWrapper";
 function Navbar() {
-  // const navigate = useNavigate();
-  // const { logout, user, loading } = useAuth();
-  // const { displayName, photoURL } = user;
   const { pathname } = useLocation();
-  // const { theme, handleThemeMode } = useTheme();
 
-  // const handleLogout = () => {
-  //   Swal.fire({
-  //     title: "Are you sure?",
-  //     text: "If wanna logout, click Ok!",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Ok",
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       logout();
-  //       Swal.fire("Success!", "You have  logged out successfully.", "success");
-  //       navigate("/");
-  //     }
-  //   });
-  // };
-  // const currentUser = useIsUser();
   const items = (
     <>
       <NavItem path="/">Home</NavItem>
@@ -89,6 +63,9 @@ function Navbar() {
               <ul id="nav-menu" className="menu menu-horizontal px-1 gap-2">
                 {items}
               </ul>
+            </div>
+            <div className="navbar-end">
+              <NavbarEnd />
             </div>
           </div>
         </SectionWrapper>
