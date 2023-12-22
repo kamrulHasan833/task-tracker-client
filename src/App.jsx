@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FooterMain from "./Layout/FooterMain";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
     <div className="font-inter">
       <Header />
       <Outlet />
+      <FooterMain />
     </div>
   );
 }

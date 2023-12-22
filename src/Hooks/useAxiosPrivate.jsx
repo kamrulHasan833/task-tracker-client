@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPrivate = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://task-tracker-server-ten.vercel.app",
 });
 const useAxiosPrivate = () => {
   // Add a request interceptor

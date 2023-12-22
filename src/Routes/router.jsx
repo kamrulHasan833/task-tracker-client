@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Tasks from "../Pages/Dashboard/User/Tasks";
 import UserHome from "../Pages/Dashboard/User/UserHome";
 import AddTask from "../Pages/Dashboard/User/addTask";
 import Home from "../Pages/Home";
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    Children: [
+    children: [
       {
         path: "/",
         element: <Home />,
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "add-task",
         element: <AddTask />,
+      },
+      {
+        path: "tasks",
+        element: <Tasks />,
       },
     ],
   },

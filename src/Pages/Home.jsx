@@ -1,5 +1,11 @@
+import WhoWouldBenifited from "../Components/Sections/WhoWouldBenifited";
+
 const Home = () => {
-  return <main>hi</main>;
+  return (
+    <main>
+      <WhoWouldBenifited />
+    </main>
+  );
 };
 
 export default Home;

@@ -33,7 +33,7 @@ const Sidebar = () => {
     {
       id: 3,
       name: "Your Tasks",
-      path: `${mainPath}/your-task`,
+      path: `${mainPath}/tasks`,
       icon: <BsListTask className="text-2xl md:text-2xl " />,
     },
   ];
