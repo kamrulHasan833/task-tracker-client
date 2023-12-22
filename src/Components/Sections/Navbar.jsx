@@ -1,16 +1,16 @@
 import Headroom from "react-headroom";
 import { Link, useLocation } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 import NavItem from "../Shared/NavItem";
 import NavbarEnd from "../Shared/NavbarEnd";
 import SectionWrapper from "../Shared/SectionWrapper";
 function Navbar() {
   const { pathname } = useLocation();
-
+  const { user } = useAuth();
   const items = (
     <>
       <NavItem path="/">Home</NavItem>
-      <NavItem path="/create-product">Add Product</NavItem>
-      <NavItem path={`/products/all`}>Products</NavItem>
+      {user && <NavItem path="/dashboard/user-home">Dashboard</NavItem>}
     </>
   );
 
